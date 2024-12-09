@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.active{
+    background-color: green;
+    color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+#modal {
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+
+    input {
+        width: 50%;
+        margin: 0 auto;
+        padding: 5px;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .btns button:nth-child(1) {
+        background-color: green;
+        &:hover{
+            background-color: #fff;
+            color: green;
+            cursor: pointer;
+        }
+
+    }
+    .btns button:nth-child(2) {
+        background-color: orange;
+        &:hover{
+            background-color: #fff;
+            color: orange;
+            cursor: pointer;
+        }
+
+    }
+    .btns button:nth-child(3) {
+        background-color: red;
+        &:hover{
+            background-color: #fff;
+            color: red;
+            cursor: pointer;
+        }
+
+    }
+
+
+    .btns {
+        display: flex;
+        justify-content: space-around;
+
+        button {
+            padding: .5rem;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        transition: .5s;
+        }
+    }
+
+    #close {
+        color: #fff;
+        right: 0;
+        top: 0;
+        position: absolute;
+        margin: 1rem;
+        font-size: 20px;
+        cursor: pointer;
+        transition: .5s;
+
+        &:hover {
+            color: red;
+        }
+
+    }
+}
+
+.totolLength {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    background-color: red;
+    border-radius: 5px;
+    padding: .3rem;
+    color: #fff;
+}
+
+.settings {
+    transition: 1s;
+
+    &:hover {
+        color: red;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: .5rem 0;
+
+    &::before {
+        position: absolute;
+        left: -10px;
+        content: "-";
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a9d8f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    background-color: #e9f5f2;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.input-group button {
+    padding: 10px;
+    border: none;
+    background-color: #6a1b9a;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.todo-item input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.todo-item input.completed {
+    text-decoration: line-through;
+}
+
+.todo-item button {
+    border: none;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-item button.complete {
+    background-color: #4caf50;
+    color: white;
+}
+
+.todo-item button.edit {
+    background-color: #ffeb3b;
+    color: black;
+}
+
+.todo-item button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.todo-item button.undo {
+    background-color: #4caf50;
+    color: white;
+}
